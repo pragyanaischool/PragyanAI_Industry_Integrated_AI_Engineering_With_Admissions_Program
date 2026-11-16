@@ -669,43 +669,96 @@ with tabs[0]:
                 st.markdown(f"**{skill}**")
                 st.write(description)
 
-    st.markdown("### Skill Sprint PRO — 25-Day Execution Model")
-    sprint_cols = st.columns(3)
-    sprint_metrics = [
-        ("10 Days", "Offline Bootcamp"),
-        ("15 Days", "Virtual Hackathon"),
-        ("60+ Hours", "Intensive Learning")
-    ]
-    for col, (value, label) in zip(sprint_cols, sprint_metrics):
-        with col:
-            with st.container(border=True):
-                st.metric(label, value)
-
+    st.markdown("### How the Programme Builds Engineering Ability")
     st.write(
-        "Each Skill Sprint PRO is organized around a focused skill area. The 10-day "
-        "offline bootcamp builds concepts and practical capability. The following "
-        "15-day virtual hackathon gives students time to apply the learning to a "
-        "problem statement, work in teams, interact with mentors and demonstrate "
-        "a working solution."
+        "The programme is designed as a progressive learning-to-practice pathway. "
+        "Students begin with engineering and programming foundations, apply concepts "
+        "to practical tasks, work with industry-relevant tools, solve real-world problems, "
+        "and progressively build, test and present working applications. The emphasis is "
+        "on demonstrated capability—not only course completion."
     )
 
-    st.markdown("### Project-Based Learning & Major Outcomes")
-    project_cols = st.columns(2)
-    project_outcomes = [
-        ("Major Project 1 — Guided Assignment Project",
-         "A structured project completed with trainer guidance. Students apply the "
-         "semester skill to a defined problem and submit source code, documentation, "
-         "screenshots and a working demonstration."),
-        ("Major Project 2 — Independent Hackathon Project",
-         "A team-based or individual project developed during the 15-day virtual "
-         "hackathon. Students define or select a problem, build a solution, document "
-         "their work and present the outcome for review.")
+    ability_steps = [
+        ("1. Learn the Foundations", "Build strong foundations in programming, data structures, Python, data handling and the concepts required for the semester’s skill area."),
+        ("2. Practise with Tools", "Use relevant frameworks, platforms, datasets and development tools through guided demonstrations, coding exercises and practical labs."),
+        ("3. Apply to Real Problems", "Translate concepts into solutions for practical problem statements, case studies and industry-oriented challenges."),
+        ("4. Build and Improve", "Develop working prototypes and applications, integrate components, debug, test and improve the solution with mentor feedback."),
+        ("5. Demonstrate Capability", "Present the work, explain technical decisions, show implementation evidence and reflect on areas for improvement."),
+        ("6. Progress to the Next Level", "Use the learning evidence and feedback to strengthen capability and take on more advanced skills in the next semester.")
     ]
-    for col, (heading, description) in zip(project_cols, project_outcomes):
+    for heading, description in ability_steps:
+        with st.expander(heading):
+            st.write(description)
+
+    st.markdown("### Continuous Evaluation – Measure Progress, Not Just Attendance")
+    st.write(
+        "Evaluation is intended to happen throughout the learning journey. Students receive "
+        "feedback at multiple checkpoints so that gaps can be identified early and addressed "
+        "through additional practice, mentoring and improvement."
+    )
+    evaluation_cols = st.columns(4)
+    evaluation_points = [
+        ("Knowledge", "Concept understanding, quizzes and technical discussions"),
+        ("Practical Skills", "Coding exercises, lab tasks and tool usage"),
+        ("Execution", "Project milestones, implementation and problem-solving"),
+        ("Professional Readiness", "Participation, discipline, communication and presentation")
+    ]
+    for col, (heading, detail) in zip(evaluation_cols, evaluation_points):
         with col:
             with st.container(border=True):
                 st.markdown(f"#### {heading}")
-                st.write(description)
+                st.write(detail)
+
+    st.markdown("#### Continuous Evaluation Cycle")
+    evaluation_cycle = [
+        ("Baseline", "Understand each student’s starting point and prerequisite readiness."),
+        ("Practice & Checkpoints", "Review exercises, lab performance, assignments and technical understanding."),
+        ("Mentor Feedback", "Provide actionable feedback on strengths, gaps and next steps."),
+        ("Improvement", "Give students opportunities to correct, practise again and improve their work."),
+        ("Semester Review", "Review accumulated evidence of skills, projects and professional readiness.")
+    ]
+    for heading, description in evaluation_cycle:
+        with st.expander(heading):
+            st.write(description)
+
+    st.markdown("### PragyanAI Skill Passport – A Record of Demonstrated Capability")
+    st.write(
+        "The Skill Passport is a proposed student-facing record that brings together "
+        "evidence of learning and achievement across the engineering journey. It helps "
+        "students, mentors and colleges see what a learner can demonstrate, what has been "
+        "completed and which capabilities need further development."
+    )
+    passport_cols = st.columns(3)
+    passport_sections = [
+        ("Skills & Tools", "Semester skill areas, technologies, frameworks and tools practised."),
+        ("Evidence of Work", "GitHub links, project records, lab tasks, demos, reports and presentations."),
+        ("Progress & Feedback", "Evaluation checkpoints, mentor feedback, improvement actions and readiness indicators.")
+    ]
+    for col, (heading, detail) in zip(passport_cols, passport_sections):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(detail)
+
+    st.markdown("#### What a Skill Passport Can Contain")
+    passport_items = [
+        "Student profile, college, branch and semester",
+        "Semester-wise skill map and learning milestones",
+        "Tools, technologies and frameworks used",
+        "Practical lab and assignment completion records",
+        "Project links, GitHub repositories and demonstration evidence",
+        "Assessment results and mentor feedback",
+        "Presentation, communication and teamwork evidence",
+        "Career pathway interests: Employment, Entrepreneurship or Deep Research"
+    ]
+    for item in passport_items:
+        st.markdown(f"- {item}")
+
+    st.info(
+        "**Outcome:** A progressive, evidence-based profile of each student’s engineering "
+        "capability that can support internship applications, placement preparation, "
+        "startup exploration and research or higher-education applications."
+    )
 
     st.markdown("### Mandatory Proof of Work")
     proof_items = [
@@ -861,49 +914,76 @@ with tabs[2]:
                 "structured learning, practical exercises and project-based assessment."
             )
 
-    st.markdown("### Skill Sprint PRO — 25-Day Execution Model")
-    sprint_blueprint = [
-        ("Days 1–10: Offline Bootcamp",
-         "Intensive concept learning, demonstrations, guided laboratory sessions, practical tasks and assignment work."),
-        ("Days 11–25: Virtual Hackathon",
-         "Problem selection, team formation, solution design, development, mentor interaction, testing, online demonstration and jury review."),
-        ("Mandatory Proof of Work",
-         "GitHub repository, README, source code, screenshots, technical documentation, presentation and deployment evidence where applicable."),
-        ("Major Project 1: Guided Assignment",
-         "A trainer-guided project applying the semester skill to a defined problem."),
-        ("Major Project 2: Independent Hackathon Project",
-         "A project independently developed during the virtual hackathon and presented for evaluation.")
+    st.markdown("### How Students Build Practical AI Engineering Ability")
+    capability_framework = [
+        ("Foundation", "Understand core concepts and develop programming, data and mathematical foundations."),
+        ("Guided Practice", "Practise with relevant tools, libraries, platforms and datasets through structured labs."),
+        ("Applied Problem-Solving", "Work on case studies and real-world problem statements that require analysis and solution design."),
+        ("Build & Integrate", "Develop working applications, connect components, debug, test and refine implementations."),
+        ("Demonstrate & Communicate", "Present technical work, explain design choices and maintain evidence of implementation."),
+        ("Progressive Advancement", "Build on previous-semester capability and move towards advanced AI, GenAI, Agentic AI and product development.")
     ]
-    for heading, description in sprint_blueprint:
+    capability_cols = st.columns(2)
+    for index, (heading, description) in enumerate(capability_framework):
+        with capability_cols[index % 2]:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(description)
+
+    st.markdown("### Continuous Evaluation Framework")
+    st.write(
+        "The brochure’s performance framework identifies four important dimensions: "
+        "technical competency, demonstrated execution, professional discipline and "
+        "interview readiness. These can be monitored through continuous checkpoints "
+        "across the semesters rather than only through a final examination."
+    )
+    assessment_matrix = [
+        ("Technical Competency", "Concept checks, coding exercises, practical demonstrations and technical problem-solving."),
+        ("Demonstrated Execution", "Completion and quality of assigned work, project milestones and portfolio evidence."),
+        ("Professional Discipline", "Attendance, participation, timely submissions, collaboration and learning commitment."),
+        ("Interview / Presentation Readiness", "Technical explanations, presentations, mock interviews and feedback-based improvement.")
+    ]
+    for heading, description in assessment_matrix:
         with st.expander(heading):
             st.write(description)
 
-
-    st.markdown("### 25-Day Skill Sprint PRO – Detailed Execution")
-    sprint_days = [
-        ("Days 1–2 | Understand", "Skill orientation, concepts, terminology, architecture and real-world applications."),
-        ("Days 3–4 | Explore", "Tool setup, library walkthroughs, coding demonstrations and guided practice."),
-        ("Days 5–7 | Practise", "Hands-on labs, coding challenges, debugging, exercises and mini tasks."),
-        ("Days 8–10 | Guided Build", "Develop the guided assignment project, review code and prepare for the hackathon."),
-        ("Days 11–15 | Discover & Design", "Virtual hackathon kickoff, problem selection, team formation, requirements and solution design."),
-        ("Days 16–20 | Build & Integrate", "Implement features, integrate components, test functionality and interact with mentors."),
-        ("Days 21–23 | Validate & Document", "Improve the solution, test outcomes, prepare README, report and demonstration evidence."),
-        ("Days 24–25 | Present & Review", "Final demonstration, technical presentation, evaluation and proof-of-work submission.")
-    ]
-    for heading, description in sprint_days:
-        with st.expander(heading):
-            st.write(description)
-
-    st.markdown("### Student Learning Cycle")
-    cycle_cols = st.columns(4)
-    for col, (heading, body) in zip(cycle_cols, [
-        ("Understand", "Concepts and foundations"), ("Practise", "Labs and coding exercises"),
-        ("Build", "Assignments and projects"), ("Demonstrate", "Hackathon and portfolio")
+    st.markdown("#### Evaluation Touchpoints")
+    touchpoints = st.columns(4)
+    for col, (heading, description) in zip(touchpoints, [
+        ("Entry", "Baseline and readiness check"),
+        ("Ongoing", "Labs, exercises and mentor feedback"),
+        ("Milestones", "Project and skill demonstrations"),
+        ("Semester End", "Portfolio and readiness review")
     ]):
         with col:
             with st.container(border=True):
                 st.markdown(f"#### {heading}")
-                st.caption(body)
+                st.caption(description)
+
+    st.markdown("### Student Skill Passport")
+    st.write(
+        "Maintain a semester-wise Skill Passport as a consolidated record of each "
+        "student’s learning journey. The passport should be updated as evidence is "
+        "reviewed and verified by the trainer, mentor or programme coordinator."
+    )
+    skill_passport_table = [
+        ("Skill Area", "Semester skill and competency checklist"),
+        ("Tools & Technologies", "Tools, libraries, platforms and frameworks used"),
+        ("Practical Evidence", "Lab exercises, coding tasks and implementation records"),
+        ("Projects & Portfolio", "Project summary, GitHub URL, demo and documentation"),
+        ("Evaluation", "Checkpoint results, feedback and improvement actions"),
+        ("Professional Skills", "Communication, teamwork, discipline and presentation"),
+        ("Career Direction", "Employment, Entrepreneurship or Deep Research pathway")
+    ]
+    for heading, detail in skill_passport_table:
+        with st.expander(heading):
+            st.write(detail)
+
+    st.caption(
+        "The Skill Passport is a recommended programme implementation mechanism. "
+        "Its format, verification process and digital or printed delivery can be finalized "
+        "by PragyanAI and the participating college."
+    )
 
     st.markdown("### Project Deliverables")
     deliverables = [
