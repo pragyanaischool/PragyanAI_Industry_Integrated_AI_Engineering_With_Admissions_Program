@@ -1047,30 +1047,161 @@ with tabs[3]:
         unsafe_allow_html=True
     )
     st.success("Admission cycle commencement: July 2027")
-    st.markdown("## Start Your AI Engineering Journey")
-    st.write(
-        "The July 2027 admission cycle is planned for students beginning or progressing "
-        "through a four-year B.E./B.Tech journey. The PragyanAI programme adds a structured "
-        "eight-semester AI skill development pathway alongside the college's regular "
-        "academic curriculum."
-    )
-    metrics = st.columns(4)
-    for col, (value, label) in zip(metrics, [
-        ("July 2027", "Admission cycle"), ("8", "Semesters"),
-        ("8", "Skill areas"), ("25 Days", "Skill Sprint PRO")
-    ]):
-        col.metric(label, value)
 
-    st.markdown("### Upcoming Programme Highlights")
-    for item in [
-        "Four-year AI Engineering skill development journey aligned with B.E./B.Tech progression.",
-        "One focused technical skill area in each semester.",
-        "10-day offline bootcamp + 15-day virtual hackathon for each Skill Sprint PRO.",
-        "Two major project outcomes: guided assignment and independent hackathon project.",
-        "Progression from Python, data and BI to GenAI, Agentic AI and product deployment.",
-        "GitHub-based proof of work, technical documentation, screenshots and demonstrations."
-    ]:
-        st.markdown(f"- {item}")
+    st.markdown("## Why Colleges Should Partner with PragyanAI")
+    st.write(
+        "PragyanAI’s Industry-Integrated AI Engineering Programme is designed as a "
+        "long-term college growth partnership—not only a technical course. It brings "
+        "admissions support, industry-relevant skilling, career pathways and institutional "
+        "brand-building together."
+    )
+
+    college_value_cols = st.columns(3)
+    college_value = [
+        (
+            "1. Admissions & Seat Utilisation",
+            "Support targeted student admissions and help colleges plan seat utilisation "
+            "through mutually agreed intake models such as 60-seat and 120-seat cohorts. "
+            "The brochure positions PragyanAI as an admissions and differentiation partner."
+        ),
+        (
+            "2. Industry-Relevant Skilling",
+            "Connect the B.E./B.Tech academic foundation with practical AI and technology "
+            "skills, real-world projects, industry tools, workflows and mentor guidance "
+            "throughout the engineering journey."
+        ),
+        (
+            "3. Career Outcomes & College Brand",
+            "Help students progress towards employment, entrepreneurship or deep research. "
+            "Showcase projects, prototypes, student achievements and outcomes to strengthen "
+            "the college’s reputation, visibility and industry engagement."
+        )
+    ]
+    for col, (heading, body) in zip(college_value_cols, college_value):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+
+    st.markdown("### A Partnership That Addresses Three College Pains")
+    pain_rows = [
+        ("Admissions", "Attract quality student enquiries and support agreed seat allocation / utilisation targets."),
+        ("Skill & Quality Gap", "Add practical, industry-relevant AI skills, projects, tools and exposure alongside the university curriculum."),
+        ("Placements & Career Outcomes", "Build pathways for jobs, startups and higher education / research while creating visible student outcomes.")
+    ]
+    for title, detail in pain_rows:
+        with st.expander(title, expanded=True):
+            st.write(detail)
+
+    st.markdown("## Why Parents Should Consider an Industry-Integrated Programme")
+    st.write(
+        "A conventional engineering degree provides the academic foundation. Parents may "
+        "also want to understand how their child will gain practical experience, build "
+        "technical confidence and prepare for opportunities before graduation. The "
+        "PragyanAI model is designed to bring structured industry exposure and applied "
+        "learning into the engineering journey."
+    )
+
+    parent_cols = st.columns(2)
+    with parent_cols[0]:
+        st.markdown("#### Typical Conventional Learning Path")
+        for item in [
+            "Primary emphasis on university subjects and academic examinations",
+            "Industry exposure may happen mainly through occasional visits or a late internship",
+            "Students may need to independently find practical projects and current tools",
+            "Industry expectations and job-readiness gaps may become clearer near graduation",
+            "Career preparation can become concentrated in the final semesters"
+        ]:
+            st.markdown(f"- {item}")
+    with parent_cols[1]:
+        st.markdown("#### PragyanAI Industry-Integrated Path")
+        for item in [
+            "University curriculum continues as the academic foundation",
+            "15 days of PragyanAI industry exposure every semester, as described in the brochure",
+            "Hands-on learning, real-world projects, industry tools and mentor guidance",
+            "Progressive portfolio and practical capability built across the degree",
+            "Final-year full industry immersion pathway in Semesters 7–8, as described in the brochure"
+        ]:
+            st.markdown(f"- {item}")
+
+    st.markdown("### Programme Comparison – What Is Different?")
+    st.markdown(
+        "| Dimension | Typical Conventional Programme | PragyanAI Industry-Integrated Model |\n"
+        "|---|---|---|\n"
+        "| Academic foundation | University B.E./B.Tech curriculum | University curriculum remains the foundation |\n"
+        "| Industry connection | Often limited or dependent on individual initiative | Structured industry exposure every semester |\n"
+        "| Practical learning | Labs and projects vary by institution | Hands-on labs, real-world projects and mentor guidance |\n"
+        "| Tools & workflows | May focus on prescribed academic tools | Exposure to industry-relevant tools and workflows |\n"
+        "| Portfolio | Often assembled by students independently | Progressive project and portfolio development |\n"
+        "| Final-year pathway | Internship / job search / higher studies | Full-year industry immersion pathway with job, startup and research options |\n"
+        "| Career direction | Often primarily placement-oriented | Employment, Entrepreneurship and Deep Research pathways |"
+    )
+    st.caption(
+        "This is a high-level programme-model comparison based on the brochure’s "
+        "contrast between conventional engineering learning and PragyanAI’s integrated "
+        "approach. Actual college curricula and student experiences vary."
+    )
+
+    st.markdown("### Three Outcomes Students Can Work Towards")
+    pathway_cols = st.columns(3)
+    student_pathways = [
+        ("Job Track", "Role-specific skills, technical portfolio, coding tests, mock interviews and employer engagement."),
+        ("Research & Higher Education", "Advanced projects, research problem exploration, experimentation, publication support and higher-study preparation."),
+        ("Startup", "Problem discovery, MVP development, innovation challenges, business-model guidance and startup ecosystem connections.")
+    ]
+    for col, (heading, body) in zip(pathway_cols, student_pathways):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+
+    st.markdown("### Programme at a Glance")
+    glance_cols = st.columns(4)
+    for col, (value, label) in zip(glance_cols, [
+        ("4 Years", "B.E./B.Tech journey"),
+        ("8 Semesters", "Progressive skill development"),
+        ("15 Days", "Industry exposure every semester"),
+        ("3 Pathways", "Job · Research · Startup")
+    ]):
+        with col:
+            with st.container(border=True):
+                st.metric(label, value)
+
+    st.markdown("---")
+    st.markdown("## Express Your Interest – July 2027 Admission Cycle")
+    st.write(
+        "Students, parents and colleges can express interest in the July 2027 cycle. "
+        "Submit an expression of interest to receive programme details, admission updates "
+        "or information about institutional collaboration."
+    )
+    eoi_cta_cols = st.columns(3)
+    with eoi_cta_cols[0]:
+        st.markdown("#### Students")
+        st.write("Explore the eight-semester AI Engineering journey and register your interest.")
+        st.button(
+            "Student EOI – Continue Below",
+            key="student_eoi_jump",
+            use_container_width=True,
+            on_click=lambda: st.session_state.update({"open_student_eoi": True})
+        )
+    with eoi_cta_cols[1]:
+        st.markdown("#### Parents")
+        st.write("Understand the learning model, industry exposure and career pathways.")
+        st.button(
+            "Parent Enquiry – Continue Below",
+            key="parent_eoi_jump",
+            use_container_width=True,
+            on_click=lambda: st.session_state.update({"open_student_eoi": True})
+        )
+    with eoi_cta_cols[2]:
+        st.markdown("#### Colleges")
+        st.write("Discuss admissions, skilling, career outcomes and a campus partnership.")
+        st.button(
+            "College EOI – Continue Below",
+            key="college_eoi_jump",
+            use_container_width=True,
+            on_click=lambda: st.session_state.update({"open_college_eoi": True})
+        )
 
     st.markdown("---")
     student_tab, college_tab, enrolled_tab = st.tabs([
@@ -1078,6 +1209,8 @@ with tabs[3]:
     ])
 
     with student_tab:
+        if st.session_state.get("open_student_eoi", False):
+            st.info("You selected the student / parent expression of interest section.")
         st.markdown("### Student Expression of Interest")
         st.write(
             "Students can express interest in joining the PragyanAI AI Engineering Skill "
@@ -1094,6 +1227,8 @@ with tabs[3]:
         render_google_eoi_form()
 
     with college_tab:
+        if st.session_state.get("open_college_eoi", False):
+            st.info("You selected the college expression of interest section.")
         st.markdown("### College Expression of Interest")
         st.write(
             "Engineering colleges interested in offering structured practical AI Engineering "
