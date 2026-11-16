@@ -42,7 +42,7 @@ DEFAULT_GOOGLE_FORM_URL = (
 )
 
 st.set_page_config(
-    page_title="PragyanAI | AI Engineering Skill Program",
+    page_title="PragyanAI | 8-Semester AI Engineering Skill Program",
     page_icon="🤖",
     layout="wide"
 )
@@ -310,7 +310,7 @@ tabs = st.tabs([
     "1. Flyer & Introduction",
     "2. Program Flipbook",
     "3. Syllabus & Program Flow",
-    "4. Upcoming Batches",
+    "4. Upcoming Programs",
     "5. Program Videos",
     "6. Ask Chatbot",
     "7. Expression of Interest",
@@ -344,7 +344,7 @@ with tabs[0]:
     st.write(
         "PragyanAI’s 24-Month AI Engineering Skill Program is an "
         "institution-integrated, project-based learning program for "
-        "pre-final and final-year engineering students. It is delivered "
+        "engineering students from 1st to 8th semester. It is delivered "
         "through four full-time, offline, on-campus bootcamps of 10 days "
         "each, aligned with the participating college’s academic calendar. "
         "Students build capabilities across eight technical skill areas, "
@@ -389,24 +389,25 @@ with tabs[0]:
         "problem-led, hands-on project-based learning model",
         "Build demonstrable GitHub portfolios, working prototypes, "
         "technical documentation and live project demonstrations",
-        "Target audience: pre-final and final-year engineering students; "
-        "recommended CGPA of 7.0+ and basic Python proficiency"
+        "Eligibility: engineering students from any of the 8 semesters (1st–8th); "
+        "recommended CGPA of 7.0+ and basic Python proficiency, with learning level "
+        "and prerequisites adapted to the semester cohort"
     ]
     for highlight in highlights:
         st.markdown(f"- {highlight}")
 
-    st.markdown("### Four-Semester Bootcamp Structure")
+    st.markdown("### Core Bootcamp Curriculum Structure")
     semester_data = [
-        ("Semester 1 · 10 Days", "Python + Data | DS + BI",
+        ("Bootcamp Track 1", "Python + Data | DS + BI",
          "Python, Data Engineering, Data Science and Business Intelligence. "
          "Indicative tools: Python, Pandas, PostgreSQL, Streamlit and Power BI."),
-        ("Semester 2 · 10 Days", "Advanced ML | DL + CV",
+        ("Bootcamp Track 2", "Advanced ML | DL + CV",
          "Advanced Machine Learning, Deep Learning and Computer Vision. "
          "Indicative tools: Scikit-learn, XGBoost, PyTorch and YOLO."),
-        ("Semester 3 · 10 Days", "NLP | GenAI + RAG",
+        ("Bootcamp Track 3", "NLP | GenAI + RAG",
          "Natural Language Processing, Generative AI, LLMs and Retrieval-Augmented "
          "Generation. Indicative tools: Hugging Face, LangChain and ChromaDB."),
-        ("Semester 4 · 10 Days", "Agentic AI | MLOps + Products",
+        ("Bootcamp Track 4", "Agentic AI | MLOps + Products",
          "Agentic AI, multi-agent systems, MLOps and product engineering. "
          "Indicative tools: LangGraph, CrewAI, FastAPI and Docker.")
     ]
@@ -527,17 +528,19 @@ with tabs[2]:
 
     st.markdown("### Program Architecture")
     st.write(
-        "**24-month institutional program | 4 semesters | 40 total offline training days.** "
-        "Each semester contains one 10-day full-time, on-campus bootcamp. "
-        "The four bootcamps are scheduled in coordination with the college academic calendar."
+        "**Institution-integrated AI Engineering Skill Program | Open to all 8 semesters.** "
+        "Program opportunities are planned every semester, with dates, cohort level "
+        "and delivery schedule coordinated with each participating college. "
+        "The core curriculum is organized into four bootcamp tracks, each designed "
+        "as a 10-day full-time, on-campus learning experience."
     )
 
     architecture_cols = st.columns(4)
     architecture = [
-        ("4", "Semesters"),
-        ("10 Days", "Per semester"),
-        ("2", "Skills per semester"),
-        ("10", "Projects per semester")
+        ("8", "Eligible semesters"),
+        ("Every semester", "Program availability"),
+        ("8", "Technical skill areas"),
+        ("40", "Total projects")
     ]
     for col, (value, label) in zip(architecture_cols, architecture):
         col.metric(label, value)
@@ -573,18 +576,18 @@ with tabs[2]:
                 st.markdown(f"**{skill}**")
                 st.caption(description)
 
-    st.markdown("### Semester-wise Curriculum Blueprint")
+    st.markdown("### Core Bootcamp Curriculum Blueprint")
     semester_blueprint = [
-        ("Semester 1 · 10 Days", "Python + Data; DS + BI",
+        ("Bootcamp Track 1", "Python + Data; DS + BI",
          "Python, Data Engineering, Data Science and Business Intelligence.",
          "Python, Pandas, PostgreSQL, Streamlit, Power BI"),
-        ("Semester 2 · 10 Days", "Advanced ML; DL + CV",
+        ("Bootcamp Track 2", "Advanced ML; DL + CV",
          "Advanced Machine Learning, Deep Learning and Computer Vision.",
          "Scikit-learn, XGBoost, PyTorch, YOLO"),
-        ("Semester 3 · 10 Days", "NLP; GenAI + RAG",
+        ("Bootcamp Track 3", "NLP; GenAI + RAG",
          "Natural Language Processing, Generative AI, LLMs and RAG.",
          "Hugging Face, LangChain, ChromaDB"),
-        ("Semester 4 · 10 Days", "Agentic AI; MLOps + Products",
+        ("Bootcamp Track 4", "Agentic AI; MLOps + Products",
          "Agentic AI, multi-agent systems, MLOps and product engineering.",
          "LangGraph, CrewAI, FastAPI, Streamlit, Docker, GitHub, MLflow")
     ]
@@ -604,7 +607,7 @@ with tabs[2]:
         col.metric(label, value)
 
     st.write(
-        "The portfolio spans eight application domains. Each independent project "
+        "The portfolio spans eight application domains. Projects are planned across the program and aligned to the student cohort. Each independent project "
         "requires students to identify a dataset, design the solution architecture, "
         "implement the code and upload the work to GitHub."
     )
@@ -622,7 +625,7 @@ with tabs[2]:
     )
     st.write(
         "**Integrated Product:** one final deployed AI application, developed by "
-        "combining the skills, tools and project experience gained across the four semesters."
+        "combining the skills, tools and project experience gained across the program tracks."
     )
 
     st.divider()
@@ -655,62 +658,43 @@ with tabs[2]:
 
 
 # =========================================================
-# TAB 4: UPCOMING BATCHES
-# =========================================================
+# TAB 4: UPCOMING PROGRAMS
 
 with tabs[3]:
 
     st.markdown(
-        '<div class="section-title">Upcoming AI Engineering Batches</div>',
+        '<div class="section-title">Upcoming AI Engineering Programs</div>',
         unsafe_allow_html=True
     )
 
     st.write(
-        "Upcoming classes for the PragyanAI AI Engineering Skill Program / Bootcamps. "
-        "Commencement is coordinated with each college academic calendar; "
-        "students usually begin in the 4th or 5th semester."
+        "PragyanAI programs are available every semester for engineering students "
+        "from any semester — 1st through 8th. Commencement dates, cohort level, "
+        "timetable and delivery arrangements are finalized with each participating "
+        "college based on its academic calendar."
     )
 
-    # Display only the two confirmed upcoming batches.
-    # This schedule is intentionally defined here so blank or obsolete rows
-    # in an older Excel workbook cannot create Batch 3, 4, 5 or display NaN.
-    upcoming_batches = [
-        {
-            "Batch": "Batch 1",
-            "Program": "AI Engineering Skill Program / Bootcamps",
-            "Mode": "Full-Time, Offline, On-Campus",
-            "Status": "Upcoming",
-            "Expected start": "January 2027",
-            "Student semester": "Usually 4th or 5th Semester",
-            "Registration": "Registration link will be announced."
-        },
-        {
-            "Batch": "Batch 2",
-            "Program": "AI Engineering Skill Program / Bootcamps",
-            "Mode": "Full-Time, Offline, On-Campus",
-            "Status": "Upcoming",
-            "Expected start": "August 2027",
-            "Student semester": "Usually 4th or 5th Semester",
-            "Registration": "Registration link will be announced."
-        }
-    ]
+    st.subheader("Program Schedule")
 
-    st.subheader("Batch Schedule")
+    with st.container(border=True):
+        st.markdown("### Every Semester")
+        st.markdown("**Program:** PragyanAI AI Engineering Skill Program")
+        st.markdown("**Availability:** Each semester, subject to college coordination")
+        st.markdown("**Eligible students:** All engineering students from 1st to 8th semester")
+        st.markdown("**Delivery:** Offline, on-campus, project-based bootcamps")
+        st.markdown("**Commencement:** As per the participating college academic calendar")
+        st.markdown("**Status:** College-wise planning / upcoming")
+        st.caption(
+            "The college and PragyanAI will confirm the semester-wise schedule, "
+            "student cohort, duration, registration process and program track."
+        )
 
-    batch_columns = st.columns(2)
-    for index, batch in enumerate(upcoming_batches):
-        with batch_columns[index]:
-            with st.container(border=True):
-                st.markdown(f"### {batch['Batch']}")
-                st.markdown(f"**Program:** {batch['Program']}")
-                st.markdown(f"**Mode:** {batch['Mode']}")
-                st.markdown(f"**Status:** {batch['Status']}")
-                st.write(f"**Expected start:** {batch['Expected start']}")
-                st.write(f"**Student semester:** {batch['Student semester']}")
-                st.caption(batch["Registration"])
+    st.info(
+        "There is no restriction to only any of the 8 semesters students. "
+        "Students from any of the eight engineering semesters may participate."
+    )
 
 
-# =========================================================
 # TAB 5: PROGRAM VIDEOS
 # =========================================================
 
@@ -808,7 +792,7 @@ with tabs[5]:
 
     # User question
     question = st.chat_input(
-        "Ask about the 24-month program, semester bootcamps, skills, projects, eligibility or institutional fees…"
+        "Ask about the AI Engineering Skill Program, all-semester eligibility, bootcamp tracks, skills, projects or institutional fees…"
     )
 
     if question:
@@ -879,7 +863,7 @@ with tabs[6]:
 
     st.write(
         "Register your interest in the PragyanAI 24-Month AI Engineering Skill Program "
-        "and its four semester-based offline bootcamps."
+        "and its semester-wise offline bootcamps available to students from all 8 semesters."
     )
 
     st.write(
