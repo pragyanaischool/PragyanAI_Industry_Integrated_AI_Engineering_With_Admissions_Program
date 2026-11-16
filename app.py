@@ -435,23 +435,35 @@ with tabs[0]:
                 st.markdown(f"#### {heading}")
                 st.write(body)
 
-    st.markdown("### Semester-Wise Industry Exposure")
+    st.markdown("### Semester-Wise Industry Exposure & Four-Year Outcomes")
     st.write(
-        "The brochure presents a model of 15 days of PragyanAI industry exposure every "
-        "semester during the learning journey, followed by full-year industry immersion "
-        "in Semesters 7 and 8. Activities include hands-on learning, real-world projects, "
-        "industry tools and workflows, mentorship, portfolio development and project outcomes."
+        "Students participate in 15 days of PragyanAI-led industry exposure every semester. "
+        "Across the four-year B.E./B.Tech journey, they progressively learn, practise, build "
+        "projects and develop a portfolio. The final outcome is guided towards one of three "
+        "pathways: a job track, research and higher education, or startup development."
     )
-    exposure = st.columns(4)
+    exposure = st.columns(3)
     for col, (value, label) in zip(exposure, [
-        ("15 Days", "Industry exposure each semester"),
+        ("15 Days", "Industry exposure every semester"),
         ("Semesters 1–6", "Learn, practise and build"),
-        ("Semesters 7–8", "Full-year industry immersion"),
-        ("4 Years", "Engineering journey")
+        ("4 Years", "Progressive engineering journey")
     ]):
         with col:
             with st.container(border=True):
                 st.metric(label, value)
+
+    st.markdown("### Final-Year Outcomes – Three Pathways")
+    outcome_cols = st.columns(3)
+    final_year_outcomes = [
+        ("Job Track", "Role-specific technical skills, project portfolio, coding practice, mock interviews, employer engagement and placement preparation."),
+        ("Research & Higher Education", "Advanced technical projects, research problem exploration, experimentation, paper and publication support, and preparation for M.S., Ph.D. or other higher studies."),
+        ("Startup", "Problem discovery, MVP development, innovation challenges, product validation, business-model guidance and startup ecosystem connections.")
+    ]
+    for col, (heading, body) in zip(outcome_cols, final_year_outcomes):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
 
     st.markdown("### Progressive Technical Skill Pyramid")
     pyramid_cols = st.columns(4)
@@ -489,6 +501,45 @@ with tabs[0]:
         "target for performing students; actual outcomes depend on meeting the stated "
         "readiness requirements and employer selection."
     )
+
+    st.markdown("### College – Three Key Pains Solved")
+    st.write(
+        "PragyanAI’s institutional partnership is designed to help colleges address "
+        "three connected challenges: attracting and enrolling students, delivering "
+        "industry-relevant practical skills, and improving student career outcomes "
+        "while strengthening the college brand."
+    )
+    pain_cols = st.columns(3)
+    college_pains = [
+        (
+            "1. Admissions & Seat Utilisation",
+            "Support the college in attracting and converting student enquiries into admissions. "
+            "Plan an intake model around 60-seat or 120-seat options, subject to the college’s "
+            "capacity, programme design and mutually agreed targets.",
+            ["60-Seat Model", "120-Seat Model"]
+        ),
+        (
+            "2. Industry-Relevant Skilling",
+            "Provide structured AI Engineering skill development aligned with evolving industry "
+            "tools, technologies and workflows through practical labs, projects, mentoring, "
+            "hackathons and portfolio development.",
+            ["Practical AI Skills", "Projects & Mentoring"]
+        ),
+        (
+            "3. Jobs, Startups & College Brand",
+            "Help students work towards job opportunities, startup creation or research pathways. "
+            "Showcase student projects, prototypes, achievements and outcomes to strengthen "
+            "the college’s visibility, reputation and industry engagement.",
+            ["Job & Career Support", "Startup & Research Outcomes"]
+        )
+    ]
+    for col, (heading, body, tags) in zip(pain_cols, college_pains):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+                for tag in tags:
+                    st.caption(f"• {tag}")
 
     st.markdown("### A Win-Win Institutional Partnership")
     partner_cols = st.columns(2)
