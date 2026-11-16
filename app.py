@@ -233,7 +233,7 @@ with st.sidebar:
     st.markdown("---")
 
     st.caption(
-        "Grow with Gyan · 8-Semester AI Engineering Skill Development Program"
+        "Grow with Gyan · 8-Semester AI Engineering Skill Development Program · July 2027 Admission Cycle"
     )
 
 
@@ -334,6 +334,108 @@ with tabs[0]:
     # Display default flyer from assets folder
     if DEFAULT_FLYER.exists():
         st.image(str(DEFAULT_FLYER), use_container_width=True)
+
+
+    st.markdown("## The AI World – A New Era of Engineering Careers")
+    st.write(
+        "Artificial Intelligence is transforming healthcare, banking, manufacturing, "
+        "education, agriculture, transportation and software development. The next "
+        "generation of engineers will build intelligent systems, develop AI applications, "
+        "automate workflows and create products powered by AI."
+    )
+    ai_cols = st.columns(3)
+    for col, (heading, body) in zip(ai_cols, [
+        ("AI is changing every industry", "Data-driven decisions, intelligent automation, computer vision and conversational systems are becoming part of modern business."),
+        ("Engineering roles are evolving", "Engineers increasingly need programming, data, machine learning, GenAI, integration and deployment capabilities."),
+        ("Build, not just consume", "Learn to design, implement, test, document and demonstrate working AI solutions.")
+    ]):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+    st.info("**Our message:** Don’t just graduate with an engineering degree. Graduate with the ability to build AI-powered solutions.")
+
+    st.markdown("## Engineering Admission – Start Your AI Career Journey")
+    st.write(
+        "Your engineering admission should be more than a college seat. PragyanAI "
+        "complements regular B.E./B.Tech academic learning with a structured, semester-wise "
+        "AI Engineering Skill Development Programme."
+    )
+    admission_cols = st.columns(3)
+    for col, (heading, body) in zip(admission_cols, [
+        ("For Students", "Learn one focused AI skill area every semester and build a portfolio of practical work."),
+        ("For Parents", "See clear learning milestones, project evidence and progressive technical development."),
+        ("For Colleges", "Strengthen practical AI engineering education alongside the existing university curriculum.")
+    ]):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+
+    st.markdown("## Colleges – Bring Practical AI Engineering to Your Campus")
+    st.write(
+        "PragyanAI collaborates with engineering institutions to introduce structured "
+        "AI skill development through semester-wise curriculum, trainers, practical labs, "
+        "assignments, hackathons, project reviews and portfolio development. This programme "
+        "supplements the college curriculum; it does not replace university requirements."
+    )
+    college_cols = st.columns(2)
+    with college_cols[0]:
+        st.markdown("#### College Coordinates")
+        for item in ["Student batches and onboarding", "Academic calendar and timetable", "Classroom / laboratory access", "Faculty coordinator and student communication"]:
+            st.markdown(f"- {item}")
+    with college_cols[1]:
+        st.markdown("#### PragyanAI Provides")
+        for item in ["Eight-semester skill roadmap", "Trainers, mentors and practical sessions", "10-day offline bootcamp + 15-day virtual hackathon", "Assignments, projects, assessments and portfolio guidance"]:
+            st.markdown(f"- {item}")
+
+    st.markdown("## Why PragyanAI – Programme Highlights")
+    target_cols = st.columns(4)
+    for col, (value, label) in zip(target_cols, [
+        ("4 Years", "B.E./B.Tech journey"), ("8 Semesters", "8 dedicated skill areas"),
+        ("25 Days", "10 offline + 15 virtual"), ("2 Projects", "Guided + independent")
+    ]):
+        with col:
+            with st.container(border=True):
+                st.metric(label, value)
+    for item in [
+        "One dedicated technical skill area in each semester, with increasing complexity.",
+        "Progression from Python and data foundations to autonomous multi-agent systems and AI product deployment.",
+        "Skill Sprint PRO: 10-day intensive offline bootcamp followed by a 15-day virtual hackathon.",
+        "Structured instruction, hands-on labs, coding challenges, assignments, case studies and mini-projects.",
+        "Two major project outcomes every semester: one guided assignment project and one independent hackathon project.",
+        "Mandatory proof of work through GitHub repositories, README files, technical documentation, screenshots and demonstrations.",
+        "Deployment evidence for projects where appropriate, plus technical seminars, hackathons, peer learning and project reviews.",
+        "Career pathway preparation for internships, placements, entrepreneurship, research and higher studies."
+    ]:
+        st.markdown(f"- {item}")
+
+    st.markdown("## Programme Flow – From Admission to AI Engineering Portfolio")
+    for heading, body in [
+        ("1. Engineering Admission", "Student joins a B.E./B.Tech programme at a collaborating college."),
+        ("2. Programme Orientation", "Introduction to the eight-semester AI Engineering skill journey."),
+        ("3. Semester Skill", "One dedicated technical skill area is assigned to the semester."),
+        ("4. 10-Day Offline Bootcamp", "Concepts, tools, guided labs, coding practice and assignment development."),
+        ("5. Guided Assignment Project", "Trainer-guided application of the semester skill to a defined problem."),
+        ("6. 15-Day Virtual Hackathon", "Problem selection, team collaboration, mentoring, implementation and testing."),
+        ("7. Independent Hackathon Project", "Student or team builds and presents an independent solution."),
+        ("8. Proof of Work & Review", "GitHub, README, report, screenshots, demo and project evaluation."),
+        ("9. Portfolio Development", "Semester evidence is consolidated into a progressive technical portfolio."),
+        ("10. Next-Semester Progression", "Students advance to the next skill area with greater technical depth.")
+    ]:
+        with st.expander(heading):
+            st.write(body)
+
+    st.markdown("## Programme-Level Targets")
+    cols = st.columns(4)
+    for col, (value, label) in zip(cols, [
+        ("1000+", "Engagement hours"), ("100+", "Real-world projects"),
+        ("60–100", "Software tools"), ("3–6", "Industry-ready MVPs")
+    ]):
+        with col:
+            with st.container(border=True):
+                st.metric(label, value)
+    st.caption("Programme-level targets from the promotional material; actual delivery should be tracked through programme records and student submissions.")
 
     st.markdown("### Program Introduction")
     st.write(
@@ -617,6 +719,33 @@ with tabs[2]:
         with st.expander(heading):
             st.write(description)
 
+
+    st.markdown("### 25-Day Skill Sprint PRO – Detailed Execution")
+    sprint_days = [
+        ("Days 1–2 | Understand", "Skill orientation, concepts, terminology, architecture and real-world applications."),
+        ("Days 3–4 | Explore", "Tool setup, library walkthroughs, coding demonstrations and guided practice."),
+        ("Days 5–7 | Practise", "Hands-on labs, coding challenges, debugging, exercises and mini tasks."),
+        ("Days 8–10 | Guided Build", "Develop the guided assignment project, review code and prepare for the hackathon."),
+        ("Days 11–15 | Discover & Design", "Virtual hackathon kickoff, problem selection, team formation, requirements and solution design."),
+        ("Days 16–20 | Build & Integrate", "Implement features, integrate components, test functionality and interact with mentors."),
+        ("Days 21–23 | Validate & Document", "Improve the solution, test outcomes, prepare README, report and demonstration evidence."),
+        ("Days 24–25 | Present & Review", "Final demonstration, technical presentation, evaluation and proof-of-work submission.")
+    ]
+    for heading, description in sprint_days:
+        with st.expander(heading):
+            st.write(description)
+
+    st.markdown("### Student Learning Cycle")
+    cycle_cols = st.columns(4)
+    for col, (heading, body) in zip(cycle_cols, [
+        ("Understand", "Concepts and foundations"), ("Practise", "Labs and coding exercises"),
+        ("Build", "Assignments and projects"), ("Demonstrate", "Hackathon and portfolio")
+    ]):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.caption(body)
+
     st.markdown("### Project Deliverables")
     deliverables = [
         "Problem statement and project objectives",
@@ -669,123 +798,128 @@ with tabs[2]:
 
 
 # =========================================================
-# TAB 4: UPCOMING PROGRAMS
+# TAB 4: JULY 2027 ADMISSION CYCLE, STUDENT & COLLEGE EOI
 # =========================================================
 
 with tabs[3]:
 
     st.markdown(
-        '<div class="section-title">Upcoming AI Engineering Skill Programs</div>',
+        '<div class="section-title">Upcoming Programme – July 2027 Admission Cycle</div>',
         unsafe_allow_html=True
     )
-
+    st.success("Admission cycle commencement: July 2027")
+    st.markdown("## Start Your AI Engineering Journey")
     st.write(
-        "PragyanAI plans to initiate one new project cohort every quarter, beginning "
-        "January 2027. These quarterly project opportunities are connected to the "
-        "AI Engineering Skill Development ecosystem. Students from participating "
-        "colleges can join based on the project scope and the institution's academic "
-        "calendar. The eight-semester skill journey remains the broader programme "
-        "framework; the project intake is scheduled quarterly."
+        "The July 2027 admission cycle is planned for students beginning or progressing "
+        "through a four-year B.E./B.Tech journey. The PragyanAI programme adds a structured "
+        "eight-semester AI skill development pathway alongside the college's regular "
+        "academic curriculum."
     )
+    metrics = st.columns(4)
+    for col, (value, label) in zip(metrics, [
+        ("July 2027", "Admission cycle"), ("8", "Semesters"),
+        ("8", "Skill areas"), ("25 Days", "Skill Sprint PRO")
+    ]):
+        col.metric(label, value)
 
-    st.subheader("Quarterly Project Schedule")
-    st.markdown(
-        "**One new project cycle every quarter · Four project intakes each year · "
-        "Starting January 2027**"
-    )
+    st.markdown("### Upcoming Programme Highlights")
+    for item in [
+        "Four-year AI Engineering skill development journey aligned with B.E./B.Tech progression.",
+        "One focused technical skill area in each semester.",
+        "10-day offline bootcamp + 15-day virtual hackathon for each Skill Sprint PRO.",
+        "Two major project outcomes: guided assignment and independent hackathon project.",
+        "Progression from Python, data and BI to GenAI, Agentic AI and product deployment.",
+        "GitHub-based proof of work, technical documentation, screenshots and demonstrations."
+    ]:
+        st.markdown(f"- {item}")
 
-    quarterly_data = None
-    if UPCOMING_BATCH_EXCEL.exists():
-        try:
-            import pandas as pd
-            quarterly_data = pd.read_excel(
-                UPCOMING_BATCH_EXCEL,
-                sheet_name="Quarterly Project Calendar",
-                header=3
-            )
-            quarterly_data = quarterly_data.dropna(how="all")
-        except Exception as exc:
-            st.warning(
-                "Unable to read the Quarterly Project Calendar worksheet: "
-                f"{exc}. Please check assets/Upcoming_Batch.xlsx."
-            )
-    else:
-        st.info(
-            "Quarterly schedule workbook not found. Add Upcoming_Batch.xlsx "
-            "to the assets folder to display the planned project cycles."
+    st.markdown("---")
+    student_tab, college_tab, enrolled_tab = st.tabs([
+        "EOI – Students to Enroll", "EOI – Colleges to Enroll", "Colleges Enrolled"
+    ])
+
+    with student_tab:
+        st.markdown("### Student Expression of Interest")
+        st.write(
+            "Students can express interest in joining the PragyanAI AI Engineering Skill "
+            "Development Programme for the July 2027 cycle and receive programme information "
+            "and admission updates."
         )
+        st.markdown("**What students can expect**")
+        for item in [
+            "Eight-semester AI skill roadmap", "Practical learning and hands-on assignments",
+            "10-day offline bootcamp", "15-day virtual hackathon",
+            "Guided and independent project development", "GitHub portfolio and proof-of-work guidance"
+        ]:
+            st.markdown(f"- {item}")
+        render_google_eoi_form()
 
-    if quarterly_data is not None and not quarterly_data.empty:
-        # Display each quarter as a separate project-intake card.
-        for start in range(0, len(quarterly_data), 2):
-            card_cols = st.columns(2)
-            for col, (_, item) in zip(
-                card_cols,
-                quarterly_data.iloc[start:start + 2].iterrows()
-            ):
-                with col:
-                    with st.container(border=True):
-                        quarter = item.get("Quarter", "Quarter to be announced")
-                        planned_start = item.get("Planned Start", None)
-                        if pd.notna(planned_start):
-                            try:
-                                start_label = pd.to_datetime(planned_start).strftime("%B %Y")
-                            except Exception:
-                                start_label = str(planned_start)
-                        else:
-                            start_label = "To be announced"
+    with college_tab:
+        st.markdown("### College Expression of Interest")
+        st.write(
+            "Engineering colleges interested in offering structured practical AI Engineering "
+            "skill development can submit an institutional expression of interest for July 2027."
+        )
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("**College collaboration may include**")
+            for item in [
+                "Semester-wise programme planning", "Student batch and academic calendar coordination",
+                "Faculty coordinator nomination", "Classroom / lab scheduling",
+                "Offline bootcamp delivery", "Virtual hackathon and project reviews"
+            ]:
+                st.markdown(f"- {item}")
+        with col2:
+            st.markdown("**Suggested institutional EOI details**")
+            for item in [
+                "College / institution name", "City, state and university affiliation",
+                "Principal / HOD / coordinator contact", "Departments and eligible branches",
+                "Expected student strength", "Preferred implementation timeline"
+            ]:
+                st.markdown(f"- {item}")
+        college_form_url = get_setting("COLLEGE_EOI_FORM_URL")
+        if college_form_url:
+            st.link_button("Submit College EOI", str(college_form_url))
+        else:
+            st.info(
+                "College EOI form link is not configured. Add COLLEGE_EOI_FORM_URL "
+                "in Streamlit Secrets when the institutional Google Form is ready."
+            )
+        st.markdown("**For partnership discussions:** +91 97410 07422 · sateesh.ambesange@pragyanai.com")
 
-                        st.markdown(f"### {quarter}")
-                        st.markdown(f"**Planned commencement:** {start_label}")
-                        st.markdown(
-                            f"**Project / Theme:** {item.get('Project / Theme', 'To be announced')}"
-                        )
-                        st.markdown(
-                            f"**Format:** {item.get('Programme Format', 'Quarterly project cohort')}"
-                        )
-                        st.markdown(
-                            f"**Target participants:** {item.get('Target Participants', 'To be announced')}"
-                        )
-                        st.markdown(
-                            f"**Status:** {item.get('Registration Status', 'Upcoming')}"
-                        )
-                        registration = item.get("Registration Link", "Will be announced")
-                        if pd.notna(registration) and str(registration).strip().lower() not in [
-                            "", "will be announced", "to be announced", "nan"
-                        ]:
-                            st.markdown(f"**Registration:** {registration}")
-                        else:
-                            st.caption("Registration link will be announced.")
-                        notes = item.get("Notes", None)
-                        if pd.notna(notes):
-                            st.caption(str(notes))
+    with enrolled_tab:
+        st.markdown("### List of Colleges Enrolled")
+        repo_url = (
+            "https://github.com/pragyanaischool/"
+            "PragyanAI_Industry_Integrated_AI_Engineering_With_Admissions_Program"
+        )
+        st.write("Use the admissions programme repository as the reference source for current college enrolment information.")
+        st.link_button("Open College Enrolment Repository", repo_url)
+        college_file = ASSETS / "Colleges_Enrolled.xlsx"
+        if college_file.exists():
+            try:
+                import pandas as pd
+                xls = pd.ExcelFile(college_file)
+                sheet_name = "Colleges Enrolled" if "Colleges Enrolled" in xls.sheet_names else xls.sheet_names[0]
+                df = pd.read_excel(college_file, sheet_name=sheet_name).dropna(how="all")
+                if df.empty:
+                    st.info("The college enrolment workbook is present but contains no records.")
+                else:
+                    st.dataframe(df, use_container_width=True, hide_index=True)
+            except Exception as exc:
+                st.warning(f"Unable to read assets/Colleges_Enrolled.xlsx: {exc}")
+        else:
+            st.info(
+                "To show college names directly in this portal, add "
+                "assets/Colleges_Enrolled.xlsx. Use a 'Colleges Enrolled' worksheet "
+                "or the first worksheet for the list."
+            )
 
-    st.markdown("### Quarterly Project Model")
-    quarterly_cols = st.columns(3)
-    quarterly_metrics = [
-        ("4", "Project cycles per year"),
-        ("3 Months", "Interval between intakes"),
-        ("January 2027", "First planned commencement")
-    ]
-    for col, (value, label) in zip(quarterly_cols, quarterly_metrics):
-        with col:
-            with st.container(border=True):
-                st.metric(label, value)
-
-    st.markdown("### How Quarterly Projects Fit the Eight-Semester Programme")
-    st.write(
-        "The eight-semester programme provides the progressive technical skill "
-        "foundation. Quarterly project cohorts provide recurring opportunities "
-        "for students to apply relevant skills through practical project work. "
-        "The specific project theme, duration, participant eligibility, mentoring "
-        "arrangements and deliverables may vary by quarter and will be announced "
-        "with each intake."
-    )
-
-    st.info(
-        "Quarterly commencement months are January, April, July and October. "
-        "The attached schedule lists project themes, target participants and "
-        "registration details as 'To be announced' until each cohort is finalized."
+    st.markdown("---")
+    st.caption(
+        "July 2027 is the planned admission cycle. Final eligibility, college participation, "
+        "batch size, fees, schedule and delivery arrangements are subject to confirmation "
+        "with participating institutions."
     )
 
 
@@ -886,7 +1020,7 @@ with tabs[5]:
 
     # User question
     question = st.chat_input(
-        "Ask about the 8-semester AI Engineering Skill Development Program, semester-wise skills, Skill Sprint PRO and projects…"
+        "Ask about the AI Engineering programme, eight-semester skills, Skill Sprint PRO, projects and July 2027 admission…"
     )
 
     if question:
@@ -1087,7 +1221,7 @@ st.markdown(
     ">
         <strong>© PragyanAI · Pragyan SmartAI Technology LLP</strong>
         <br>
-        Grow with Gyan · 8-Semester AI Engineering Skill Development Program
+        Grow with Gyan · 8-Semester AI Engineering Skill Development Program · July 2027 Admission Cycle
         <br>
         <a href="https://pragyanai.com" target="_blank">
             www.pragyanai.com
