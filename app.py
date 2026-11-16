@@ -42,7 +42,7 @@ DEFAULT_GOOGLE_FORM_URL = (
 )
 
 st.set_page_config(
-    page_title="PragyanAI | 8-Semester AI Engineering Skill Development Program",
+    page_title="PragyanAI | Industry-Integrated AI Engineering Program",
     page_icon="🤖",
     layout="wide"
 )
@@ -109,7 +109,7 @@ def render_google_eoi_form():
 
     st.markdown("### Student Registration")
     st.write(
-        "Register your interest in the PragyanAI 8-Semester AI Engineering Skill Development Program. "
+        "Register your interest in the PragyanAI Industry-Integrated AI Engineering Program. "
         "The programme offers one focused technical skill area in each semester, supported by practical learning and projects."
     )
 
@@ -233,7 +233,7 @@ with st.sidebar:
     st.markdown("---")
 
     st.caption(
-        "Grow with Gyan · 8-Semester AI Engineering Skill Development Program · July 2027 Admission Cycle"
+        "Grow with Gyan · Industry-Integrated AI Engineering Program · July 2027 Admission Cycle"
     )
 
 
@@ -389,26 +389,134 @@ with tabs[0]:
         for item in ["Eight-semester skill roadmap", "Trainers, mentors and practical sessions", "10-day offline bootcamp + 15-day virtual hackathon", "Assignments, projects, assessments and portfolio guidance"]:
             st.markdown(f"- {item}")
 
-    st.markdown("## Why PragyanAI – Programme Highlights")
-    target_cols = st.columns(4)
-    for col, (value, label) in zip(target_cols, [
-        ("4 Years", "B.E./B.Tech journey"), ("8 Semesters", "8 dedicated skill areas"),
-        ("25 Days", "10 offline + 15 virtual"), ("2 Projects", "Guided + independent")
+    st.markdown("## Why PragyanAI – Industry-Integrated AI Engineering Programme")
+    st.write(
+        "The PragyanAI model connects college-based academic learning with structured "
+        "industry-relevant skill development, real-world projects, mentorship and career "
+        "pathways. The objective is to help students build practical capability throughout "
+        "their engineering journey instead of postponing industry readiness until after graduation."
+    )
+
+    value_cols = st.columns(4)
+    brochure_metrics = [
+        ("500+", "Lab hours"),
+        ("100+", "Projects"),
+        ("8+", "Hackathons"),
+        ("6+", "Technical seminars")
+    ]
+    for col, (value, label) in zip(value_cols, brochure_metrics):
+        with col:
+            with st.container(border=True):
+                st.metric(label, value)
+
+    tool_col, pathway_col = st.columns(2)
+    with tool_col:
+        with st.container(border=True):
+            st.metric("100+", "Tools")
+            st.write(
+                "Exposure to relevant programming languages, AI/ML frameworks, "
+                "development platforms, industry tools and deployment technologies."
+            )
+    with pathway_col:
+        with st.container(border=True):
+            st.markdown("#### Three Career Pathways")
+            st.write("Employment · Entrepreneurship · Deep Research")
+
+    st.markdown("### The PragyanAI Industry-Integration Model")
+    integration_cols = st.columns(3)
+    integration_cards = [
+        ("Learn in College", "Build academic foundations through the university B.E./B.Tech curriculum."),
+        ("Build at PragyanAI", "Participate in structured skill development, practical labs, projects and mentoring."),
+        ("Work on Real Industry Problems", "Apply skills to industry-oriented projects, product development and professional workflows.")
+    ]
+    for col, (heading, body) in zip(integration_cols, integration_cards):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+
+    st.markdown("### Semester-Wise Industry Exposure")
+    st.write(
+        "The brochure presents a model of 15 days of PragyanAI industry exposure every "
+        "semester during the learning journey, followed by full-year industry immersion "
+        "in Semesters 7 and 8. Activities include hands-on learning, real-world projects, "
+        "industry tools and workflows, mentorship, portfolio development and project outcomes."
+    )
+    exposure = st.columns(4)
+    for col, (value, label) in zip(exposure, [
+        ("15 Days", "Industry exposure each semester"),
+        ("Semesters 1–6", "Learn, practise and build"),
+        ("Semesters 7–8", "Full-year industry immersion"),
+        ("4 Years", "Engineering journey")
     ]):
         with col:
             with st.container(border=True):
                 st.metric(label, value)
-    for item in [
-        "One dedicated technical skill area in each semester, with increasing complexity.",
-        "Progression from Python and data foundations to autonomous multi-agent systems and AI product deployment.",
-        "Skill Sprint PRO: 10-day intensive offline bootcamp followed by a 15-day virtual hackathon.",
-        "Structured instruction, hands-on labs, coding challenges, assignments, case studies and mini-projects.",
-        "Two major project outcomes every semester: one guided assignment project and one independent hackathon project.",
-        "Mandatory proof of work through GitHub repositories, README files, technical documentation, screenshots and demonstrations.",
-        "Deployment evidence for projects where appropriate, plus technical seminars, hackathons, peer learning and project reviews.",
-        "Career pathway preparation for internships, placements, entrepreneurship, research and higher studies."
-    ]:
-        st.markdown(f"- {item}")
+
+    st.markdown("### Progressive Technical Skill Pyramid")
+    pyramid_cols = st.columns(4)
+    pyramid = [
+        ("Foundation", "Python, advanced Python, NumPy, Pandas, APIs and programming foundations."),
+        ("Analysis", "Data Science, data visualisation, statistics, Business Intelligence, Excel, Tableau and Big Data."),
+        ("Intelligence", "Machine Learning, Advanced ML, Deep Learning, Computer Vision, NLP and LLMs."),
+        ("Autonomy", "Generative AI, Agentic AI, multi-agent systems and MVP product development.")
+    ]
+    for col, (heading, body) in zip(pyramid_cols, pyramid):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+
+    st.markdown("### Three Career Pathways – Beyond Generic Placements")
+    pathway_cols = st.columns(3)
+    pathways = [
+        ("Employment", "Role-specific skills, mock interviews, employer engagement and coding tests for roles such as Data Analyst, ML Engineer and GenAI Developer."),
+        ("Entrepreneurship", "Problem discovery, MVP development, innovation challenges, business-model guidance and startup development."),
+        ("Deep Research", "Advanced technical projects, experimentation, paper and publication support, patent exploration and higher-education preparation.")
+    ]
+    for col, (heading, body) in zip(pathway_cols, pathways):
+        with col:
+            with st.container(border=True):
+                st.markdown(f"#### {heading}")
+                st.write(body)
+
+    st.markdown("### Performance-Based Placement Readiness")
+    st.write(
+        "The brochure describes a transparent placement-readiness framework built around "
+        "four demonstrated inputs: technical competency, demonstrated execution through "
+        "assigned projects and portfolios, professional discipline, and interview readiness "
+        "supported by mock-interview feedback. The brochure positions 100% placement as a "
+        "target for performing students; actual outcomes depend on meeting the stated "
+        "readiness requirements and employer selection."
+    )
+
+    st.markdown("### A Win-Win Institutional Partnership")
+    partner_cols = st.columns(2)
+    with partner_cols[0]:
+        st.markdown("#### College Responsibilities")
+        for item in [
+            "Provide laboratory infrastructure and internet access",
+            "Coordinate admissions and student onboarding",
+            "Appoint admission coordinators and nominate faculty mentors",
+            "Manage institutional coordination and fee collection"
+        ]:
+            st.markdown(f"- {item}")
+    with partner_cols[1]:
+        st.markdown("#### PragyanAI Responsibilities")
+        for item in [
+            "Design industry-relevant curriculum",
+            "Deliver expert trainers and mentors",
+            "Conduct hackathons, assessments and project reviews",
+            "Provide programme marketing collateral",
+            "Support placement and employer engagement"
+        ]:
+            st.markdown(f"- {item}")
+
+    st.caption(
+        "The programme metrics and delivery model above are reproduced from the supplied "
+        "PragyanAI brochure. They describe programme targets and the proposed institutional "
+        "model, not guaranteed individual student outcomes."
+    )
 
     st.markdown("## Programme Flow – From Admission to AI Engineering Portfolio")
     for heading, body in [
@@ -450,12 +558,12 @@ with tabs[0]:
     )
 
     metrics = st.columns(4)
-    metric_values = ["8 Semesters", "8 Skill Areas", "25 Days", "2 Major Projects"]
+    metric_values = ["4 Years", "500+ Hours", "100+ Projects", "100+ Tools"]
     metric_labels = [
-        "Four-Year B.E./B.Tech Journey",
-        "One Dedicated Skill Per Semester",
-        "Skill Sprint PRO Execution Model",
-        "Guided + Independent Project"
+        "B.E./B.Tech Journey",
+        "Practical Lab Engagement",
+        "Hands-on Project Portfolio",
+        "Industry-Relevant Technology Stack"
     ]
     for col, value, label in zip(metrics, metric_values, metric_labels):
         col.markdown(
@@ -649,7 +757,7 @@ with tabs[2]:
         "**Four-year B.E./B.Tech journey | 8 semesters | One dedicated skill area per semester.** "
         "The programme progresses through eight focused skill areas. Each semester has "
         "one primary skill focus, supported by hands-on practice, assignments and project work. "
-        "There is no separate industry-immersion component in this programme."
+        "The brochure describes 15 days of PragyanAI industry exposure each semester in Semesters 1–6, followed by full-year industry immersion in Semesters 7–8."
     )
 
     architecture_cols = st.columns(4)
@@ -943,7 +1051,7 @@ with tabs[4]:
     if not video_urls:
         st.info(
             "No program video has been configured yet. Add verified video "
-            "links for this 8-Semester AI Engineering Skill Development Program using "
+            "links for this Industry-Integrated AI Engineering Program using "
             "YOUTUBE_VIDEO_URLS in Streamlit Secrets."
         )
         st.code(
@@ -1090,7 +1198,7 @@ with tabs[6]:
     )
 
     st.write(
-        "Register your interest in the PragyanAI 8-Semester AI Engineering Skill Development Program. "
+        "Register your interest in the PragyanAI Industry-Integrated AI Engineering Program. "
         "The programme offers one dedicated technical skill area in each semester, supported by practical learning and projects."
     )
 
@@ -1221,7 +1329,7 @@ st.markdown(
     ">
         <strong>© PragyanAI · Pragyan SmartAI Technology LLP</strong>
         <br>
-        Grow with Gyan · 8-Semester AI Engineering Skill Development Program · July 2027 Admission Cycle
+        Grow with Gyan · Industry-Integrated AI Engineering Program · July 2027 Admission Cycle
         <br>
         <a href="https://pragyanai.com" target="_blank">
             www.pragyanai.com
