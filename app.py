@@ -538,105 +538,160 @@ with tabs[1]:
 with tabs[2]:
 
     st.markdown(
-        '<div class="section-title">Syllabus & Program Flow</div>',
+        '<div class="section-title">STP on Machine Learning — Syllabus & Program Flow</div>',
         unsafe_allow_html=True
     )
 
     st.markdown("### Program Architecture")
     st.write(
-        "**Four-year B.E./B.Tech journey | 8 semesters | One dedicated skill area per semester.** "
-        "The programme progresses through eight focused skill areas. Each semester has "
-        "one primary skill focus, supported by hands-on practice, assignments and project work. "
-        "There is no separate industry-immersion component in this programme."
+        "**Student Training Program (STP) on Machine Learning | 2 Weeks | 30 Hours.** "
+        "The proposal from E&ICT Academy, IIT Guwahati specifies a two-week programme "
+        "conducted Monday to Friday, with 3 hours of live learning per day. It combines "
+        "theoretical learning, hands-on laboratory sessions, case studies and applied "
+        "project exposure to introduce students to Data Science, Applied Machine Learning "
+        "and emerging AI technologies."
     )
 
     architecture_cols = st.columns(4)
     architecture = [
-        ("8", "Semesters"),
-        ("1", "Skill area per semester"),
-        ("8", "Total skill areas"),
-        ("25 Days", "Skill Sprint PRO model")
+        ("2 Weeks", "Programme duration"),
+        ("30 Hours", "Overall programme hours"),
+        ("3 Hours", "Daily session duration"),
+        ("12", "Modules listed in curriculum table")
     ]
     for col, (value, label) in zip(architecture_cols, architecture):
         col.metric(label, value)
 
-    if PROGRAM_FLOW_IMAGE.exists():
-        st.subheader("Eight-Semester Program Flow")
-        st.image(
-            str(PROGRAM_FLOW_IMAGE),
-            caption="PragyanAI AI Engineering Skill Development Program – one focused skill area in each semester",
-            use_container_width=True
-        )
-    else:
-        st.info(
-            "Program flow image not found. If available, place the approved image at "
-            "assets/Program_Flow.png."
-        )
+    st.markdown("### Programme Delivery Schedule")
+    delivery_cols = st.columns(2)
+    with delivery_cols[0]:
+        with st.container(border=True):
+            st.markdown("**Duration**")
+            st.markdown("2 weeks")
+            st.caption("Monday to Friday over two weeks")
+    with delivery_cols[1]:
+        with st.container(border=True):
+            st.markdown("**Daily learning**")
+            st.markdown("3 hours per day")
+            st.caption("10 working days · 30 hours overall")
 
-    st.markdown("### One Skill Area Per Semester")
-    semester_journey = [
-        ("Semester 1", "Python & Data Wrangling",
-         "Core Python, OOP, Pandas, NumPy, SQL/NoSQL, data cleaning and automation."),
-        ("Semester 2", "Data Science & EDA",
-         "Statistics, hypothesis testing, multivariate EDA and visualisation."),
-        ("Semester 3", "Business Intelligence",
-         "Data transformation, data modelling, KPI design, dashboards and storytelling."),
-        ("Semester 4", "Machine Learning, Advanced ML & MLOps",
-         "Predictive modelling, AutoML, recommendation systems, time-series analysis, explainable AI and deployment."),
-        ("Semester 5", "Deep Learning & Computer Vision",
-         "ANN, CNN, transfer learning, image classification, segmentation and object detection."),
-        ("Semester 6", "NLP & Voice AI Systems",
-         "Transformers, text processing, chatbots, speech input/output and voice applications."),
-        ("Semester 7", "Generative AI & RAG Architectures",
-         "Prompting, embeddings, vector databases, LLM APIs and RAG applications."),
-        ("Semester 8", "Autonomous Multi-Agent Systems & AI Product Deployment",
-         "Multi-agent orchestration, workflow automation, full-stack integration and deployed MVPs.")
+    st.markdown("### Programme Learning Flow")
+    learning_flow = [
+        ("1. Conceptual Learning",
+         "Understand mathematical, statistical, programming and Machine Learning foundations."),
+        ("2. Guided Demonstrations",
+         "Explore algorithms, tools, libraries and practical workflows through instructor-led demonstrations."),
+        ("3. Hands-on Laboratory Sessions",
+         "Practice Python programming, data analytics, model development and AI/ML techniques."),
+        ("4. Case Studies & Applied Learning",
+         "Connect concepts with data-driven problems and application areas such as healthcare, finance, cybersecurity, agriculture, manufacturing and smart technologies."),
+        ("5. Assessment & Completion",
+         "Complete the relevant cohort/module requirements. The proposal states that participants completing an individual module receive a certificate for that module; completion of all modules leads to the programme completion certificate.")
     ]
-    for semester, skill, detail in semester_journey:
-        with st.expander(f"{semester} — {skill}"):
-            st.write(detail)
-            st.write(
-                "Semester focus: one dedicated technical skill area, delivered through "
-                "structured learning, practical exercises and project-based assessment."
-            )
-
-    st.markdown("### Skill Sprint PRO — 25-Day Execution Model")
-    sprint_blueprint = [
-        ("Days 1–10: Offline Bootcamp",
-         "Intensive concept learning, demonstrations, guided laboratory sessions, practical tasks and assignment work."),
-        ("Days 11–25: Virtual Hackathon",
-         "Problem selection, team formation, solution design, development, mentor interaction, testing, online demonstration and jury review."),
-        ("Mandatory Proof of Work",
-         "GitHub repository, README, source code, screenshots, technical documentation, presentation and deployment evidence where applicable."),
-        ("Major Project 1: Guided Assignment",
-         "A trainer-guided project applying the semester skill to a defined problem."),
-        ("Major Project 2: Independent Hackathon Project",
-         "A project independently developed during the virtual hackathon and presented for evaluation.")
-    ]
-    for heading, description in sprint_blueprint:
+    for heading, description in learning_flow:
         with st.expander(heading):
             st.write(description)
 
-    st.markdown("### Project Deliverables")
-    deliverables = [
-        "Problem statement and project objectives",
-        "Dataset / input data description and preprocessing approach, where relevant",
-        "Source code and reproducible project structure",
-        "Implementation results, testing and evaluation",
-        "GitHub repository and README documentation",
-        "Screenshots, demo video or live demonstration",
-        "Final presentation and review"
+    st.markdown("### Detailed Curriculum — 12 Modules")
+    st.caption(
+        "The proposal's objectives section refers to 10 modules, while its detailed "
+        "curriculum table lists 12 modules. The module list below follows the detailed "
+        "table in the proposal."
+    )
+
+    modules = [
+        ("101", "AIML-01", "Mathematics for Data Science",
+         "Linear Algebra; Multivariate Calculus; Statistics; Probability; Linear Regression; Outlier Rejection; Unconstrained Optimization; Constrained and Unconstrained Optimization.",
+         "30 hours (as listed in the module table)"),
+        ("102", "AIML-02", "Statistics for Data Science",
+         "Constrained and Unconstrained Optimization; Stochastic Search; Genetic Algorithm; Particle Swarm Optimization (PSO).",
+         "30 hours (as listed in the module table)"),
+        ("103", "AIML-03", "Python Programming & Data Analytics",
+         "Python Fundamentals; Strings and Collections; Tuples, Sets, Dictionaries and Functions; Pandas for Data Analysis; Data Cleaning and Visualization; NumPy; SciPy; Scikit-learn; Seaborn; Matplotlib.",
+         "30 hours (as listed in the module table)"),
+        ("201", "AIML-04", "Feature Space & Dimensionality Reduction",
+         "Feature Space; Dimensionality Reduction; Pattern Mining.",
+         "30 hours (as listed in the module table)"),
+        ("202", "AIML-05", "Unsupervised Learning, Generative Models & Pattern Mining",
+         "Unsupervised Learning; Generative Models; Sequence Mining.",
+         "30 hours (as listed in the module table)"),
+        ("203", "AIML-06", "Supervised Learning — Classification & Regression",
+         "Supervised Learning; Classification; Regression.",
+         "30 hours (as listed in the module table)"),
+        ("301", "AIML-07", "Deep Learning & Computer Vision",
+         "Deep Learning; Convolutional Neural Networks (CNN); Recurrent Neural Networks (RNN); LSTM; Generative Adversarial Networks (GANs).",
+         "30 hours (as listed in the module table)"),
+        ("302", "AIML-08", "NLP, Speech & Audio Processing",
+         "NLP and NLTK; Text Normalization; Tokenization; Lemmatization; CNN and RNN Models for NLP; Introduction to Speech and Audio Processing.",
+         "30 hours (as listed in the module table)"),
+        ("303", "AIML-09", "Machine Learning on Cloud",
+         "Cloud Fundamentals; Machine Learning Tools on Cloud; Deploying Machine Learning Projects on Cloud.",
+         "30 hours (as listed in the module table)"),
+        ("401", "AIML-10", "Generative AI",
+         "Fundamentals of Generative AI and Large Language Models (LLMs); Generative AI Tools and Platforms; Prompt Engineering; Building AI Applications using APIs and Frameworks; Ethical, Legal and Societal Implications.",
+         "30 hours (as listed in the module table)"),
+        ("402", "AIML-11", "Agentic AI",
+         "Fundamentals of Agentic AI; AI Agent Development; Tools; Memory; Agentic Workflows; RAG and Agentic RAG; Multi-Agent Systems; Applications; Security; Capstone Project.",
+         "30 hours (as listed in the module table)"),
+        ("403", "AIML-12", "Advanced ML Techniques",
+         "Advanced ML Foundations and Model Optimization; Advanced Ensemble Learning; Advanced Unsupervised and Representation Learning; Advanced Deep Learning for ML Applications; Explainable and Trustworthy Machine Learning; Advanced ML Deployment and Real-World Applications.",
+         "30 hours (as listed in the module table)")
     ]
-    for item in deliverables:
+
+    for code, cohort, title, topics, hours in modules:
+        with st.expander(f"Module {code} · {title}"):
+            st.markdown(f"**Cohort:** {cohort}")
+            st.write(topics)
+            st.caption(hours)
+
+    st.warning(
+        "Hours clarification: the proposal states that the complete STP is 30 hours "
+        "(2 weeks × 5 days × 3 hours per day), but the detailed module table assigns "
+        "30 hours to each of its 12 modules. These figures do not reconcile. Confirm "
+        "the module-wise allocation with E&ICT Academy before publishing a per-module "
+        "timetable or total module-hour calculation."
+    )
+
+    st.markdown("### Target Audience")
+    st.write(
+        "The proposal identifies final-year undergraduate (UG) students and postgraduate "
+        "(PG) students from Engineering, Science, Computer Applications and related domains."
+    )
+
+    st.markdown("### Learning Objectives & Expected Benefits")
+    objectives = [
+        "Build a foundation in Data Science, Applied Machine Learning, algorithms and tools.",
+        "Develop practical understanding through hands-on laboratory sessions and case studies.",
+        "Introduce predictive modelling and AI-driven decision-making.",
+        "Encourage innovation, problem-solving and research aptitude.",
+        "Support preparation for higher studies, internships, competitive examinations and industry-oriented projects."
+    ]
+    for item in objectives:
         st.markdown(f"- {item}")
 
-    st.markdown("### Technology Stack & Deployment")
+    st.markdown("### Certification")
     st.write(
-        "The technology stack is selected according to the semester skill and project. "
-        "It may include Python, Jupyter/Google Colab, Pandas, NumPy, Scikit-learn, "
-        "TensorFlow/PyTorch, OpenCV, NLP/LLM frameworks, databases, Streamlit, Gradio, "
-        "FastAPI and suitable cloud hosting. Deployment requirements are finalized "
-        "according to the project scope and available platform."
+        "According to the proposal, participants completing an individual cohort/module "
+        "will receive a certificate for that module. Participants completing all modules "
+        "will be awarded the programme course-completion certificate from E&ICT Academy, "
+        "IIT Guwahati, subject to the Academy's completion requirements."
+    )
+
+    st.markdown("### Participation & Fee Details")
+    participation_cols = st.columns(3)
+    participation = [
+        ("500", "Minimum participants"),
+        ("₹1,000", "Course fee per participant"),
+        ("GST extra", "As applicable")
+    ]
+    for col, (value, label) in zip(participation_cols, participation):
+        with col:
+            col.metric(label, value)
+
+    st.caption(
+        "The proposal states that the programme is conducted exclusively for the "
+        "participating institute, with a minimum requirement of 500 students. "
+        "The fee is ₹1,000 per participant, excluding GST."
     )
 
     st.divider()
