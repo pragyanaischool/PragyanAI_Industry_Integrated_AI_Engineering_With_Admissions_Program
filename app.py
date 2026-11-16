@@ -347,18 +347,18 @@ with tabs[0]:
         "four-year B.E./B.Tech journey — from Semester 1 to Semester 8. Students learn "
         "academic foundations at college, gain hands-on industry exposure through "
         "PragyanAI programs every semester, build real-world projects and portfolios, "
-        "and progress to full industry immersion during the 7th and 8th semesters. "
+        "and develop one focused technical skill area in each semester, from Semester 1 through Semester 8. "
         "The program combines structured skill development, mentor guidance, "
         "deployment, hackathons, research and product-building."
     )
 
     metrics = st.columns(4)
-    metric_values = ["8 Semesters", "Every Semester", "10 Skill Tracks", "7th–8th"]
+    metric_values = ["8 Semesters", "Every Semester", "8 Skill Areas", "8 Projects Stages"]
     metric_labels = [
         "Complete B.E./B.Tech Journey",
-        "Industry Exposure at PragyanAI",
+        "Semester-wise Skill Program",
         "Progressive Technical Curriculum",
-        "Final-Year Industry Immersion"
+        "Progressive Skill Development"
     ]
 
     for col, value, label in zip(metrics, metric_values, metric_labels):
@@ -375,44 +375,44 @@ with tabs[0]:
     st.markdown("### Key Program Highlights")
     highlights = [
         "An 8-semester industry-integrated learning journey, starting from the 1st semester",
-        "15 days of PragyanAI industry exposure every semester, as illustrated in the program brochure",
-        "Semester-wise progression from AI foundations and Python to data analytics, GenAI, LLM applications, Agentic AI, data engineering, industry projects and deployment",
+        "one focused technical skill area delivered per semester, supported by practical learning and projects",
+        "One skill area per semester, progressing from Python and data wrangling through data science, BI, ML, deep learning, NLP, GenAI/RAG and agentic AI product deployment",
         "10 progressive technical skill tracks covering Python & Data Wrangling; Data Science & EDA; Business Intelligence; Machine Learning & MLOps; Advanced ML & GenAI; Deep Learning & Computer Vision; NLP & Voice AI; Generative AI & RAG; Autonomous Multi-Agent Systems; and End-to-End MVP Deployment",
         "Hands-on learning through real-world problems, guided tasks, major projects, GitHub portfolio development and live cloud deployment",
         "A 15-day virtual hackathon to turn learning into team-based, real-world problem-solving and product development",
-        "Final-year industry immersion during Semesters 7 and 8, with work on real industry projects, production-grade solutions, research and innovation",
+        "Progressive skill development through all eight semesters, culminating in integrated AI product development and deployment",
         "Mentorship and guidance from industry experts, with opportunities to build a startup, pursue research or access placement pathways",
         "Designed for engineering students from Semester 1; learning depth and project complexity increase as students progress through the semesters"
     ]
     for highlight in highlights:
         st.markdown(f"- {highlight}")
 
-    st.markdown("### Eight-Semester Industry-Integrated Journey")
+    st.markdown("### Eight-Semester Skill Progression")
     semester_data = [
-        ("Semester 1", "AI Foundations, Data & Tools",
-         "Build the foundation in AI, data and essential tools. Begin hands-on learning and understand industry expectations."),
-        ("Semester 2", "Python, Data & Problem Solving",
-         "Strengthen Python programming, data handling and structured problem-solving through practical assignments."),
-        ("Semester 3", "Data Analytics",
-         "Work with data analysis, exploratory data analysis, statistics, visualisation and business-oriented datasets."),
-        ("Semester 4", "GenAI, LLMs & Applications",
-         "Explore Generative AI, large language models and practical AI application development."),
-        ("Semester 5", "Agentic AI & Data Engineering",
-         "Progress into agentic AI workflows, data engineering and more advanced applied systems."),
-        ("Semester 6", "Industry Projects & Deployment",
-         "Build, integrate and deploy industry-oriented projects, strengthening portfolio and production skills."),
-        ("Semester 7", "Full Industry Immersion",
-         "Participate in full-year industry immersion activities, work on real industry problems and build production-grade solutions."),
-        ("Semester 8", "Full Industry Immersion & Career Pathways",
-         "Continue industry projects, research and innovation, product development, startup exploration and placement preparation.")
+        ("Semester 1", "Python & Data Wrangling",
+         "Core Python, OOP, Pandas, NumPy, SQL/NoSQL, regular expressions, data cleaning and automation."),
+        ("Semester 2", "Data Science & Exploratory Data Analysis",
+         "Descriptive and inferential statistics, hypothesis testing, multivariate EDA, data visualisation and domain-based analysis."),
+        ("Semester 3", "Business Intelligence",
+         "Data transformation, data modelling, KPI design, interactive dashboards and business storytelling."),
+        ("Semester 4", "Machine Learning, Advanced ML & MLOps",
+         "Data processing, classification, regression, clustering, AutoML, recommendation systems, time-series forecasting, explainable AI and deployment."),
+        ("Semester 5", "Deep Learning & Computer Vision",
+         "ANN, CNN, transfer learning, image classification, segmentation and YOLO-based object detection."),
+        ("Semester 6", "NLP & Voice AI Systems",
+         "Text processing, transformers, chatbots, speech-to-text, text-to-speech and voice-enabled applications."),
+        ("Semester 7", "Generative AI & RAG Architectures",
+         "Prompt engineering, embeddings, vector databases, LLM APIs, retrieval-augmented generation and grounded AI assistants."),
+        ("Semester 8", "Autonomous Multi-Agent Systems & AI Product Deployment",
+         "Agent orchestration, researcher/writer/reviewer agents, workflow automation, frontend/backend integration, databases and end-to-end MVP deployment.")
     ]
 
     semester_columns = st.columns(2)
-    for index, (heading, focus, description) in enumerate(semester_data):
+    for index, (heading, skill, description) in enumerate(semester_data):
         with semester_columns[index % 2]:
             with st.container(border=True):
                 st.markdown(f"#### {heading}")
-                st.markdown(f"**{focus}**")
+                st.markdown(f"**{skill}**")
                 st.write(description)
 
     st.markdown("### PragyanAI Skill Sprint PRO")
@@ -548,7 +548,7 @@ with tabs[2]:
     st.write(
         "**Four-year B.E./B.Tech journey | 8 semesters | Industry integration from Semester 1.** "
         "The brochure describes 15 days of PragyanAI industry exposure every semester "
-        "through Semesters 1–6, followed by full industry immersion in Semesters 7–8. "
+        "through Semesters 1–6, with a focused skill area delivered in every semester from Semester 1 through Semester 8. "
         "The exact college timetable and implementation calendar are coordinated with "
         "each participating institution."
     )
@@ -556,9 +556,9 @@ with tabs[2]:
     architecture_cols = st.columns(4)
     architecture = [
         ("8", "Semesters"),
-        ("15 Days", "PragyanAI exposure each semester (Sem 1–6)"),
+        ("1", "Dedicated skill area per semester"),
         ("10", "Technical skill tracks"),
-        ("2", "Final-year immersion semesters")
+        ("8", "Semester-wise skill areas")
     ]
     for col, (value, label) in zip(architecture_cols, architecture):
         col.metric(label, value)
@@ -567,7 +567,7 @@ with tabs[2]:
         st.subheader("Industry-Integrated Program Flow")
         st.image(
             str(PROGRAM_FLOW_IMAGE),
-            caption="PragyanAI Industry-Integrated AI Engineering Program – semester-wise learning and final-year industry immersion",
+            caption="PragyanAI Industry-Integrated AI Engineering Program – semester-wise learning and semester-wise practical skill development",
             use_container_width=True
         )
     else:
@@ -576,37 +576,32 @@ with tabs[2]:
             "assets/Program_Flow.png."
         )
 
-    st.markdown("### Eight-Semester Learning Journey")
+    st.markdown("### One Skill Area Per Semester")
     semester_journey = [
-        ("Semester 1", "AI Foundations, Data & Tools", "Build foundations and early industry exposure."),
-        ("Semester 2", "Python, Data & Problem Solving", "Develop programming, data and problem-solving capabilities."),
-        ("Semester 3", "Data Analytics", "Apply analytics, statistics, EDA and visualisation."),
-        ("Semester 4", "GenAI, LLMs & Applications", "Build practical applications with Generative AI and LLMs."),
-        ("Semester 5", "Agentic AI & Data Engineering", "Develop agentic workflows and data engineering skills."),
-        ("Semester 6", "Industry Projects & Deployment", "Build and deploy industry-oriented projects."),
-        ("Semester 7", "Full Industry Immersion", "Work on real industry projects and production-grade solutions."),
-        ("Semester 8", "Full Industry Immersion", "Continue industry work, research, innovation and career pathways.")
+        ("Semester 1", "Python & Data Wrangling", "Core Python, OOP, Pandas, NumPy, SQL/NoSQL, data cleaning and automation."),
+        ("Semester 2", "Data Science & EDA", "Statistics, hypothesis testing, multivariate analysis and visualisation."),
+        ("Semester 3", "Business Intelligence", "Data transformation, modelling, KPI design, dashboards and storytelling."),
+        ("Semester 4", "Machine Learning, Advanced ML & MLOps", "Predictive modelling, AutoML, recommendation systems, time series, XAI and deployment."),
+        ("Semester 5", "Deep Learning & Computer Vision", "ANN, CNN, transfer learning, image classification, segmentation and object detection."),
+        ("Semester 6", "NLP & Voice AI Systems", "Transformers, text processing, chatbots, speech input/output and voice applications."),
+        ("Semester 7", "Generative AI & RAG Architectures", "Prompting, embeddings, vector databases, LLM APIs and RAG applications."),
+        ("Semester 8", "Autonomous Multi-Agent Systems & AI Product Deployment", "Multi-agent orchestration, workflow automation, full-stack integration and deployed MVPs.")
     ]
-    for semester, focus, outcome in semester_journey:
-        with st.expander(f"{semester} — {focus}"):
-            st.write(outcome)
-            if semester in ("Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6"):
-                st.write("Brochure model: 15 days of PragyanAI industry exposure during the semester.")
-            else:
-                st.write("Brochure model: Full industry immersion during the final year.")
+    for semester, skill, detail in semester_journey:
+        with st.expander(f"{semester} — {skill}"):
+            st.write(detail)
+            st.write("Delivery: one focused skill area for this semester, with practical tasks, projects and portfolio evidence.")
 
-    st.markdown("### Ten Technical Skill Tracks")
+    st.markdown("### Eight Semester-Aligned Skill Areas")
     skill_groups = [
         ("1. Python & Data Wrangling", "Core Python, OOP, Pandas, NumPy, SQL/NoSQL, regular expressions, data cleaning and automation."),
         ("2. Data Science & EDA", "Statistics, descriptive and inferential analysis, hypothesis testing, multivariate EDA and visualisation."),
         ("3. Business Intelligence", "Data transformation, data modelling, KPI design, dashboard visualisation and storytelling."),
-        ("4. Machine Learning & MLOps", "Data processing, modelling, AutoML, explainable AI and deployment."),
-        ("5. Advanced ML & GenAI", "Recommendation systems, time-series forecasting, association rule mining and GenAI integration."),
-        ("6. Deep Learning & Computer Vision", "ANN, CNN, transfer learning, image classification, segmentation and YOLO object detection."),
-        ("7. NLP & Voice AI Systems", "Text processing, transformers, chatbots, speech input/output and voice-enabled applications."),
-        ("8. Generative AI & RAG Architectures", "Prompting, embeddings, vector databases, LLM APIs, RAG and grounded responses."),
-        ("9. Autonomous Multi-Agent Systems", "Orchestrator, researcher, writer and reviewer agents; workflow automation and agent collaboration."),
-        ("10. End-to-End MVP Deployment", "Frontend, FastAPI backend, AI/ML engine, databases and cloud deployment.")
+        ("4. Machine Learning, Advanced ML & MLOps", "Data processing, modelling, AutoML, explainable AI, recommendation systems, forecasting and deployment."),
+        ("5. Deep Learning & Computer Vision", "ANN, CNN, transfer learning, image classification, segmentation and YOLO object detection."),
+        ("6. NLP & Voice AI Systems", "Text processing, transformers, chatbots, speech input/output and voice-enabled applications."),
+        ("7. Generative AI & RAG Architectures", "Prompting, embeddings, vector databases, LLM APIs, RAG and grounded responses."),
+        ("8. Autonomous Multi-Agent Systems & AI Product Deployment", "Agent orchestration, workflow automation, frontend/backend integration, databases and MVP deployment.")
     ]
     skill_cols = st.columns(2)
     for index, (skill, description) in enumerate(skill_groups):
@@ -676,7 +671,7 @@ with tabs[3]:
     st.write(
         "The Industry-Integrated AI Engineering Program is designed as an eight-semester "
         "journey. The brochure describes 15 days of PragyanAI industry exposure in "
-        "each of Semesters 1–6, followed by full industry immersion in Semesters 7–8. "
+        "each of Semesters 1–6, with a focused skill area delivered in every semester from Semester 1 through Semester 8. "
         "Implementation dates are coordinated with each participating college."
     )
 
@@ -685,14 +680,14 @@ with tabs[3]:
     with st.container(border=True):
         st.markdown("### Eight-Semester Program Journey")
         st.markdown("**Program:** PragyanAI AI Engineering Skill Program")
-        st.markdown("**Availability:** Semester-wise from Semester 1 through Semester 8")
+        st.markdown("**Availability:** One focused skill area in each semester, Semester 1 through Semester 8")
         st.markdown("**Eligible students:** B.E./B.Tech students across all eight semesters")
-        st.markdown("**Delivery:** College learning + 15-day PragyanAI exposure in Semesters 1–6 + final-year industry immersion")
+        st.markdown("**Delivery:** Semester-wise practical skill program, with one skill area per semester")
         st.markdown("**Commencement:** Semester-wise, aligned with the participating college academic calendar")
         st.markdown("**Status:** College-wise planning / upcoming")
         st.caption(
             "The college and PragyanAI will coordinate semester-wise dates, student cohorts, "
-            "industry exposure activities and final-year immersion arrangements."
+            "skill delivery, practical activities and project milestones."
         )
 
     st.info(
@@ -798,7 +793,7 @@ with tabs[5]:
 
     # User question
     question = st.chat_input(
-        "Ask about the 8-semester Industry-Integrated AI Engineering Program, skill tracks, hackathon, projects or industry immersion…"
+        "Ask about the 8-semester AI Engineering Program, semester-wise skills, hackathon and projects…"
     )
 
     if question:
